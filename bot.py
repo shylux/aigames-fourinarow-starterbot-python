@@ -19,7 +19,7 @@ class Bot(object):
 
     settings = dict()
     round = -1
-    board = np.zeros((6, 7), dtype=np.uint8)
+    board = np.zeros((6, 7), dtype=np.uint8)  # Access with [row_nr, col_nr]. [0,0] is on the top left.
     timeout = -1
 
     def make_turn(self):

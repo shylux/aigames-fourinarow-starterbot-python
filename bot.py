@@ -39,7 +39,7 @@ class Bot(object):
         if board[0, col_nr] != 0:
             raise Bot.ColumnFullException()
         new_board = np.copy(board)
-        for row_nr in range(self.rows()-1, -1, -1):
+        for row_nr in reversed(range(self.rows())):
             if new_board[row_nr, col_nr] == 0:
                 new_board[row_nr, col_nr] = curr_player
                 return new_board
